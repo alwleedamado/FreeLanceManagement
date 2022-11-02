@@ -1,0 +1,1 @@
+node .\freelanceManagmentClient\node_modules\.bin\ng serve
