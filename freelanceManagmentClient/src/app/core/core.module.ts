@@ -3,11 +3,16 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ToastrModule } from 'ngx-toastr';
+import { CardComponent } from './components/card/card.component';
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
+import { InterceptService } from './services/intercept.service';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    CardComponent
+  ],
   imports: [
     ToastrModule.forRoot()
   ],
@@ -16,7 +21,15 @@ import { ToastrModule } from 'ngx-toastr';
     FormsModule,
     ReactiveFormsModule,
     NgbModule,
+    HttpClientModule,
     ToastrModule
+  ],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: InterceptService,
+      multi: true
+    }
   ]
 })
 export class CoreModule { }
