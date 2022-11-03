@@ -1,0 +1,3 @@
+[submodule "freelanceManagmentClient/BManager"]
+	path = freelanceManagmentClient/BManager
+	url = https://github.com/alwleedamado/BManager.git
