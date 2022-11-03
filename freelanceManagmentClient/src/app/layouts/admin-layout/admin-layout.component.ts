@@ -1,11 +1,10 @@
-import {filter} from 'rxjs/operators';
-import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
-import { Location, LocationStrategy, PathLocationStrategy, PopStateEvent } from '@angular/common';
+import { Location, PopStateEvent } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
+import { filter } from 'rxjs/operators';
 
-import { NavbarComponent } from '../../components/navbar/navbar.component';
-import { Router, NavigationEnd, NavigationStart } from '@angular/router';
-import { Subscription ,  Observable } from 'rxjs';
+import { NavigationEnd, NavigationStart, Router } from '@angular/router';
 import PerfectScrollbar from 'perfect-scrollbar';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-admin-layout',
