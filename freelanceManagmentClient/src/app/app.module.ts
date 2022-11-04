@@ -9,6 +9,10 @@ import { ToastrModule } from 'ngx-toastr';
 import { AppRoutingModule } from './app.routing';
 
 import { AppComponent } from './app.component';
+import { StoreRouterConnectingModule } from '@ngrx/router-store';
+import { MergedRouterStateSerializer } from 'core/reducers/router-state/merged-route-serialzer';
+import { StoreModule } from '@ngrx/store';
+import { reducers, metaReducers } from 'core/reducers';
 
 
 @NgModule({
@@ -19,7 +23,17 @@ import { AppComponent } from './app.component';
     RouterModule,
     AppRoutingModule,
     NgbModule,
-    ToastrModule.forRoot()
+		StoreModule.forRoot(reducers, { metaReducers }),
+
+    ToastrModule.forRoot({
+      progressBar: true,
+      positionClass: "toast-top-right",
+      extendedTimeOut: 3000,
+    }),
+    StoreRouterConnectingModule.forRoot({
+      stateKey: 'router',
+      serializer: MergedRouterStateSerializer
+    }),
   ],
   declarations: [
     AppComponent

@@ -6,12 +6,14 @@ import { ToastrModule } from 'ngx-toastr';
 import { CardComponent } from './components/card/card.component';
 import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { InterceptService } from './services/intercept.service';
+import { PromptComponent } from './components/prompt/prompt.component';
 
 
 
 @NgModule({
   declarations: [
-    CardComponent
+    CardComponent,
+    PromptComponent
   ],
   imports: [
     ToastrModule.forRoot()
