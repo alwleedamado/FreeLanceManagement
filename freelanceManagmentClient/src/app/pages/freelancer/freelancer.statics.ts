@@ -1,5 +1,5 @@
 export const statics = {
-    moduleName: 'Freelancer',
+    moduleName: 'Freelancers',
     components: {
         Freelancer: 'Freelancer'
     }

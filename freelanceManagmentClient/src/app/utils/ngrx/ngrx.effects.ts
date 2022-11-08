@@ -3,7 +3,7 @@ import { Store } from '@ngrx/store';
 import { TypedAction } from '@ngrx/store/src/models';
 import { AppState } from 'core/reducers';
 import { registerError } from 'core/reducers/error-state/error-state.actions';
-import uiActions from 'core/reducers/ui-state.actions';
+import uiActions from 'core/reducers/ui-state/ui-state.actions';
 import { Observable, of, pipe } from 'rxjs';
 import { catchError, exhaustMap, filter, map, mergeMap, switchMap, take } from 'rxjs/operators';
 import { ToastEffectsConfig } from 'utils/helpers/toast-effects-config';
