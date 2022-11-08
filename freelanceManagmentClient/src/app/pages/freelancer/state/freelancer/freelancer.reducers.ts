@@ -13,7 +13,7 @@ export const adapter: EntityAdapter<Freelancer> = createEntityAdapter<Freelancer
     sortComparer: false
 });
 
-const initialState = ngrxInitialState<Freelancer>(adapter)
+const initialState = ngrxInitialState<Freelancer>(adapter) as State
 
 export const stateReducer = createReducer(initialState, ...getDefaultOns(adapter, actions))
 export function reducers(state: State | undefined, action: Action) {
