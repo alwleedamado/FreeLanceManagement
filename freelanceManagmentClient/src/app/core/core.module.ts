@@ -7,7 +7,7 @@ import { CardComponent } from './components/card/card.component';
 import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { InterceptService } from './services/intercept.service';
 import { PromptComponent } from './components/prompt/prompt.component';
-
+import { CdkTableModule } from '@angular/cdk/table';
 
 
 @NgModule({
@@ -16,7 +16,9 @@ import { PromptComponent } from './components/prompt/prompt.component';
     PromptComponent
   ],
   imports: [
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    CdkTableModule
+    
   ],
   exports:[
     CommonModule,
@@ -24,7 +26,11 @@ import { PromptComponent } from './components/prompt/prompt.component';
     ReactiveFormsModule,
     NgbModule,
     HttpClientModule,
-    ToastrModule
+    ToastrModule,
+
+    // Components
+    CardComponent,
+    PromptComponent
   ],
   providers: [
     {
