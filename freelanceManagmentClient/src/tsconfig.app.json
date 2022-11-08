@@ -11,6 +11,11 @@
       "dom"
     ],
   },
+  "angularCompilerOptions": {
+    "strictTemplates": false,
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": false,
+  },
   "exclude": [
     "test.ts",
     "**/*.spec.ts"

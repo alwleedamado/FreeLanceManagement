@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CoreModule } from 'core/core.module';
+import { TableListModule } from 'modules/table-list/table-list.module';
 
 
 
@@ -7,6 +8,10 @@ import { CoreModule } from 'core/core.module';
   declarations: [],
   imports: [
     CoreModule
+  ],
+  exports:[
+    CoreModule,
+    TableListModule
   ]
 })
 export class SharedModule { }
